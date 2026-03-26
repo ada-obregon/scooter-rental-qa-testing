@@ -7,7 +7,7 @@ Web application – Chrome
 1. Place an order  
 
 **Steps:**  
-1. Create a request with an existing order  
+1. Create a cancel request with an existing order  
 2. Send the request  
 
 **Expected:**  
