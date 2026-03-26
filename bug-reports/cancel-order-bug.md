@@ -19,4 +19,6 @@ Order does not cancel; a 400 Bad Request appears
 **Severity:** High  
 **Priority:** High
 
-![cancel-order-bug](/Evidence/Cancel_Bug.png)
+**Status:** Open
+
+![cancel-order-bug](/screenshots/cancel-bug.png)
