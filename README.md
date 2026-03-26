@@ -144,5 +144,6 @@ Feature: Design Validation
 - Performance testing
 
 ## Author
-Ada Obregón Serrano
+Ada Obregón Serrano 
+
 QA Tester | Manual Testing | Test Documentation
