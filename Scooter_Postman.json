@@ -1,0 +1,278 @@
+{
+  "info": {
+    "_postman_id": "3e8e96f0-b48b-4ea5-bf7a-1b2a74588633",
+    "name": "Final Project",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "26176224"
+  },
+  "item": [
+    {
+      "name": "Crear repartidor",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"login\": \"ninja\",\r\n    \"password\": \"1234\",\r\n    \"firstName\": \"saske\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{URL_FP}}/api/v1/courier",
+          "host": [
+            "{{URL_FP}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "courier"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Iniciar sesión",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"login\": \"ninja\",\r\n    \"password\": \"1234\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{URL_FP}}/api/v1/courier/login",
+          "host": [
+            "{{URL_FP}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "courier",
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Eliminar repartidor",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{URL_FP}}/api/v1/courier/1",
+          "host": [
+            "{{URL_FP}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "courier",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Obtener lista de pedidos",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{URL_FP}}/api/v1/orders?courierId=2",
+          "host": [
+            "{{URL_FP}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "orders"
+          ],
+          "query": [
+            {
+              "key": "courierId",
+              "value": "2"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Crear pedido",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"firstName\": \"Naruto\",\r\n    \"lastName\": \"Uchiha\",\r\n    \"address\": \"Konoha, 142 apt.\",\r\n    \"metroStation\": 4,\r\n    \"phone\": \"+7 800 355 35 35\",\r\n    \"rentTime\": 5,\r\n    \"deliveryDate\": \"2020-06-06\",\r\n    \"comment\": \"Saske, come back to Konoha\",\r\n    \"color\": [\r\n        \"BLACK\"\r\n    ]\r\n}"
+        },
+        "url": {
+          "raw": "{{URL_FP}}/api/v1/orders",
+          "host": [
+            "{{URL_FP}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "orders"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Aceptar pedido",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "url": {
+          "raw": "{{URL_FP}}/api/v1/orders/accept/1?courierId=2",
+          "host": [
+            "{{URL_FP}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "orders",
+            "accept",
+            "1"
+          ],
+          "query": [
+            {
+              "key": "courierId",
+              "value": "2"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Completar pedido",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "url": {
+          "raw": "{{URL_FP}}/api/v1/orders/finish/1",
+          "host": [
+            "{{URL_FP}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "orders",
+            "finish",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Cancelar pedido",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"track\": -59940\r\n}"
+        },
+        "url": {
+          "raw": "{{URL_FP}}/api/v1/orders/cancel",
+          "host": [
+            "{{URL_FP}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "orders",
+            "cancel"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Obtener pedido por su número",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{URL_FP}}/api/v1/orders/track?t=940217",
+          "host": [
+            "{{URL_FP}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "orders",
+            "track"
+          ],
+          "query": [
+            {
+              "key": "t",
+              "value": "940217"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Buscar estaciones de metro",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{URL_FP}}/api/v1/stations/search?s=Del",
+          "host": [
+            "{{URL_FP}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "stations",
+            "search"
+          ],
+          "query": [
+            {
+              "key": "s",
+              "value": "Del"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Servidor de ping",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{URL_FP}}/api/v1/ping",
+          "host": [
+            "{{URL_FP}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "ping"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
