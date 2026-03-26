@@ -1,4 +1,15 @@
 # QA Test Documentation – Scooter Rental Web Application
+## QA Project Summary
+
+This project demonstrates manual QA testing for a scooter rental web application.
+
+Scope includes:
+- Functional testing
+- Form validation
+- Order workflow testing
+- API testing using Postman
+- Bug identification and reporting
+
 ## Project Overview
 This repository contains manual test documentation for a Scooter Rental Web Application.
 The project focuses on validating core user flows including:
