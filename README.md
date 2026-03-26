@@ -2,7 +2,7 @@
 
 ## QA Project Summary
 
-This project demonstrates manual QA testing for a scooter rental web application.
+This project demonstrates end-to-end manual QA testing for a scooter rental web application.
 
 Scope includes:
 - Functional testing
